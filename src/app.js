@@ -36,8 +36,8 @@ var update_from_settings = function(){
 			throw e;
 		};
 	}
-	fn = function(n, event){
-		return code.eval({n: n, channel: event.channel});
+	fn = function(n, t, event){
+		return code.eval({n: n, t: t, channel: event.channel});
 	};
 	
 	results_zipped_container_el.setAttribute("hidden", "hidden");
