@@ -33,7 +33,7 @@
 						if(!isPercussion || mess_with_percussion){
 							// TODO: account for randomness in fn by transforming NOTEOFFs the same as the previous NOTEON
 							// can keep a map of midi note numbers to what the previous NOTEON was transformed to
-							event.param1 = fn(event.param1, {channel: event.channel, isPercussion: isPercussion});
+							event.param1 = fn(event.param1, i, {channel: event.channel, isPercussion: isPercussion})&127;
 						}
 					}
 				}
